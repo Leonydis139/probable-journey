@@ -1,0 +1,8 @@
+numpy
+networkx
+scipy
+gudhi
+matplotlib
+gradio
+boto3
+gdown
