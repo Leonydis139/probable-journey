@@ -1,0 +1,27 @@
+name: Benchmark Topological SAT Solver
+
+on:
+  push:
+    paths:
+      - '**.py'
+      - 'data/sat_instances/**'
+      - '.github/workflows/**'
+
+jobs:
+  run-benchmarks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run Solver and Export
+        run: python scripts/run_solver.py
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: sat-analysis
+          path: results/
