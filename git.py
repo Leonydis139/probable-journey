@@ -2,9 +2,9 @@
 
 # --- CONFIGURATION ---
 GITHUB_USER=Leonydis139
-REPO_NAME=probable-journey
-REPO_URL=https://github.com/Leonydis137/probable-journey.git
-COMMIT_MSG=Initial commit of probable-journey
+REPO_NAME=main
+REPO_URL=https://github.com/Leonydis137/probable-journey
+COMMIT_MSG=Initial commit origin main
 # ----------------------
 
 # Step 1: Go into the folder
@@ -20,7 +20,7 @@ git add .
 git commit -m "$COMMIT_MSG"
 
 # Step 5: Add GitHub remote
-git remote add origin "probable-journey"
+git remote add origin main
 
 # Step 6: Rename default branch and push
 git branch -M main
